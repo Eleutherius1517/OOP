@@ -32,10 +32,11 @@ public class StudentGroup implements Iterable<Student>, Comparable<StudentGroup>
     // переопределенный метод по заданию
     @Override
     public String toString() {
+        String studentStr = "-";
         for (Student student : group) {
-            System.out.println(student);
+            studentStr += student + "\n-";
         }
-        return "Student Group id = " + this.idGroup + ", amount student" + this.group.size();
+        return "***Student Group id = " + this.idGroup + "\n***Amount student" + this.group.size() + "\n***Student List:\n" + studentStr;
     }
     // переопределенный метод для описания своего итератора
     @Override

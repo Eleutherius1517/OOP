@@ -40,12 +40,13 @@ public class StudentSteam implements Iterable<StudentGroup>{
     // переопределенный метод по заданию
     @Override
     public String toString() {
+        String studentStr = "-";
         for (StudentGroup studentGroup : lstGrp) {
             for (Student student : studentGroup) {
-                System.out.println(student);
+                studentStr += student + ", id group: " + studentGroup.getIdGroup() + "\n-";
             }
         }
-        return "Number stream: " + this.id + "Amount group: " + this.lstGrp.size();
+        return "\n***Number stream: " + this.id + "\n***Amount group: " + this.lstGrp.size()  + "\n***Student List:\n" + studentStr;
     }
     
     
