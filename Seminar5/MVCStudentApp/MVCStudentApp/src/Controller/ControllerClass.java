@@ -25,6 +25,7 @@ public class ControllerClass {
     //Конструктор
     public ControllerClass(List<IGetModel> modelData) {
         this.modelData = modelData;
+        model = modelData.get(0);
     }
     // MVP логика
     public void update(){
